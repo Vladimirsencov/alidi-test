@@ -18,7 +18,6 @@ public class RussianNumberToStringTwoWayParserTest {
     @Autowired
     RussianNumberToStringTwoWayParser parser;
 
-
     @Test
     public void twoWayParsTest() {
 
@@ -55,9 +54,8 @@ public class RussianNumberToStringTwoWayParserTest {
     }
 
     private void checkParse(long number) {
-        logger.info("input number is {}", number);
         String parseResult = parser.parseNumberToString(number);
-        logger.info("output string is {}", parseResult);
+        logger.info("input number is {} output string is {}", number, parseResult);
         Assert.assertEquals(number, parser.parseToNumber(parseResult));
     }
 }
